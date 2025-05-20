@@ -3,7 +3,6 @@ import { Box, Typography, Paper } from "@mui/material";
 
 const CountdownTimer = () => {
   const targetTime = new Date(Date.now() + (25 * 24 * 60 * 60 + 15 * 60 * 60 + 41 * 60 + 20) * 1000);
-
   const [timeLeft, setTimeLeft] = useState(getTimeRemaining());
 
   function getTimeRemaining() {
@@ -30,25 +29,34 @@ const CountdownTimer = () => {
   return (
     <Box
       sx={{
-        // minHeight: '100vh',
+        width: '100%',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        px: 2,
-        backgroundColor: '#f9f9f9',
+        px: { xs: 2, sm: 4 },
+        py: { xs: 3, sm: 4 },
       }}
     >
       <Paper
         elevation={3}
         sx={{
-          p: 4,
+          // px: { xs: 2, sm: 3, md:4 },
+          py: { xs: 3, sm: 4, md:6 },
           backgroundColor: "#fff",
           textAlign: "center",
-          width: 'fit-content',
+          width: '100%',
+          maxWidth: '700px',
         }}
       >
-        <Box 
-         sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            flexWrap: "wrap",
+            gap: { xs: 1.5, sm: 2, md: 3 },
+          }}
+        >
           <TimeBlock label="Days" value={timeLeft.days} />
           <Colon />
           <TimeBlock label="Hours" value={timeLeft.hours} />
@@ -66,20 +74,26 @@ const TimeBlock = ({ label, value }) => (
   <Box sx={{ textAlign: "center", mx: 1 }}>
     <Typography
       sx={{
-        fontSize: { xs: '1.5rem', md: '2rem' },
-        fontWeight: 'bold',
+        fontSize: { xs: '1.90rem', sm: '2.75rem', md: '3.75rem' },
+        fontWeight: 700,
+
       }}
     >
       {String(value).padStart(2, "0")}
     </Typography>
-    <Typography variant="body2">{label}</Typography>
+    <Typography
+      variant="body2"
+      sx={{ fontSize: { xs: '0.75rem', sm: '0.85rem', md: '1rem' } }}
+    >
+      {label}
+    </Typography>
   </Box>
 );
 
 const Colon = () => (
   <Typography
     sx={{
-      fontSize: { xs: '1.5rem', md: '2rem' },
+      fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem' },
       fontWeight: 'bold',
       color: 'gray',
       mt: 0.5,

@@ -16,7 +16,7 @@ const Header = () => {
       <Box
         sx={{
           width: '100%',
-          maxWidth: '100%',
+          maxWidth: '75%',
         }}
       >
         <Typography
@@ -24,8 +24,8 @@ const Header = () => {
           color="black"
           gutterBottom
           sx={{
-            fontSize: { xs: '2rem', sm: '2.5rem', md: '3.75rem' },
-            fontWeight: 700,
+            fontSize: {xs: '2rem', sm: '2.5rem',md: '4rem'},
+            fontWeight: 600,
             fontfamily: 'roboto',
             mx:'3rem',
           }}
@@ -37,7 +37,7 @@ const Header = () => {
           variant="body1"
           sx={{
             mb: 4,
-            fontSize: { xs: '0.9rem', sm: '1rem', md: '1.25rem' },
+            fontSize: { xs: '1.25rem', sm: '1.25rem', md: '1.75rem' },
           }}
         >
           See how with my brand new blockchain analytics platform, Blocksight.
@@ -48,8 +48,9 @@ const Header = () => {
           src="./src/assets/about.png"
           alt="Header"
           sx={{
-            width: { xs: '100%', sm: '80%', md: '28.875rem' },
-            height: 'auto',
+            // width: { xs: '100%', sm: '80%', md: '28.875rem' },
+            width: "786px",
+            height: '449px',
             maxHeight: { xs: '400px', md: '32.5rem' },
             borderRadius: '20px',
             objectFit: 'contain',

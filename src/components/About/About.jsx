@@ -4,7 +4,6 @@ const About = () => {
     return(
         <Box
             sx={{
-            
             textAlign: 'center',
             display: 'flex',
             flexDirection: 'column',
@@ -19,7 +18,7 @@ const About = () => {
             color="black"
             gutterBottom
             sx={{
-                fontSize: { xs: '1rem', sm: '1.75rem', md: '2.5rem' },
+                 fontSize: '3rem' ,
                 fontWeight: 700,
                 fontfamily: 'roboto',
                 mx:'3rem',
@@ -31,7 +30,8 @@ const About = () => {
             variant="body1"
             sx={{
                 mb: 4,
-                fontSize: { xs: '0.75rem', sm: '0.8rem', md: '0.9rem' },
+                fontSize: '1.4rem', 
+                maxWidth:'800px',
             }}
             >
           See how to use our advanced blockchain analytics platform to cut through the noise and gain actionable insights into the crypto & NFT markets.
@@ -48,15 +48,17 @@ const About = () => {
         <Grid item xs={12} md={6}>
             <Box
                 sx={{
+                mx:{md: 20},
                 px: { xs: 2, sm: 3, md: 4 },
                 py: { xs: 3, sm: 4 },
-               
-                maxWidth: { xs: '100%', md: '600px' },
+                // border:'1px solid black',
+                maxWidth: '400px',
                 height: '100%',
                 display: 'flex',
+                justifyContent:'center',
                 flexDirection: 'column',
-                alignItems: 'flex-start', // ALIGN TO START
-                textAlign: 'left', // ENSURE TEXT IS LEFT-ALIGNED
+                alignItems: 'flex-start', 
+                textAlign: 'start',
                 }}
             >
                 <Typography
@@ -64,7 +66,7 @@ const About = () => {
                   color="primary"
                   sx={{ 
                     color: ' black',
-                    fontSize: { xs: '1rem', sm: '1.75rem', md: '2.5rem' },
+                    fontSize:'2.5rem' ,
                     fontWeight: 600,
                     lineHeight: 1.2,
                     justifyContent:'felx-start',
@@ -77,7 +79,7 @@ const About = () => {
                 <Typography
                   variant="body1"
                   sx={{ 
-                    fontSize: { xs: '0.75rem', sm: '0.8rem', md: '0.9rem' },
+                    fontSize: '1rem' ,
                     fontWeight: 400,
                     lineHeight: 1.6,
                     mb: { xs: 2, sm: 3 }
@@ -144,14 +146,17 @@ const About = () => {
         <Grid item xs={12} md={6}>
             <Box
                 sx={{
+                mx:{md: 20},
                 px: { xs: 2, sm: 3, md: 4 },
                 py: { xs: 3, sm: 4 },
-                maxWidth: { xs: '100%', md: '600px' },
+                // border:'1px solid black',
+                maxWidth: '400px',
                 height: '100%',
                 display: 'flex',
+                justifyContent:'center',
                 flexDirection: 'column',
-                alignItems: 'flex-start', // ALIGN TO START
-                textAlign: 'left', // ENSURE TEXT IS LEFT-ALIGNED
+                alignItems: 'flex-start', 
+                textAlign: 'start',
                 }}
             >
                 <Typography
@@ -159,7 +164,7 @@ const About = () => {
                   color="primary"
                   sx={{ 
                     color: ' black',
-                    fontSize: { xs: '1rem', sm: '1.75rem', md: '2.5rem' },
+                    fontSize: '2.5rem' ,
                     fontWeight: 600,
                     lineHeight: 1.2,
                     justifyContent:'felx-start',
@@ -172,7 +177,7 @@ const About = () => {
                 <Typography
                   variant="body1"
                   sx={{ 
-                    fontSize: { xs: '0.75rem', sm: '0.8rem', md: '0.9rem' },
+                    fontSize:  '1rem' ,
                     fontWeight: 400,
                     lineHeight: 1.6,
                     mb: { xs: 2, sm: 3 }
@@ -187,14 +192,17 @@ const About = () => {
         <Grid item xs={12} md={6}>
             <Box
                 sx={{
+                mx:{md: 20},
                 px: { xs: 2, sm: 3, md: 4 },
                 py: { xs: 3, sm: 4 },
-                maxWidth: { xs: '100%', md: '600px' },
+                // border:'1px solid black',
+                maxWidth: '400px',
                 height: '100%',
                 display: 'flex',
+                justifyContent:'center',
                 flexDirection: 'column',
-                alignItems: 'flex-start', // ALIGN TO START
-                textAlign: 'left', // ENSURE TEXT IS LEFT-ALIGNED
+                alignItems: 'flex-start', 
+                textAlign: 'start',
                 }}
             >
                 <Typography
@@ -202,7 +210,7 @@ const About = () => {
                   color="primary"
                   sx={{ 
                     color: ' black',
-                    fontSize: { xs: '1rem', sm: '1.75rem', md: '2.5rem' },
+                    fontSize: '2.5rem' ,
                     fontWeight: 600,
                     lineHeight: 1.2,
                     justifyContent:'felx-start',
@@ -215,7 +223,7 @@ const About = () => {
                 <Typography
                   variant="body1"
                   sx={{ 
-                    fontSize: { xs: '0.75rem', sm: '0.8rem', md: '0.9rem' },
+                    fontSize: '1rem',
                     fontWeight: 400,
                     lineHeight: 1.6,
                     mb: { xs: 2, sm: 3 }
@@ -282,14 +290,17 @@ const About = () => {
         <Grid item xs={12} md={6}>
             <Box
                 sx={{
+                mx:{md: 20},
                 px: { xs: 2, sm: 3, md: 4 },
                 py: { xs: 3, sm: 4 },
-                maxWidth: { xs: '100%', md: '600px' },
+                // border:'1px solid black',
+                maxWidth: '400px',
                 height: '100%',
                 display: 'flex',
+                justifyContent:'center',
                 flexDirection: 'column',
-                alignItems: 'flex-start', // ALIGN TO START
-                textAlign: 'left', // ENSURE TEXT IS LEFT-ALIGNED
+                alignItems: 'flex-start', 
+                textAlign: 'start',
                 }}
             >
                 <Typography
@@ -297,7 +308,7 @@ const About = () => {
                   color="primary"
                   sx={{ 
                     color: ' black',
-                    fontSize: { xs: '1rem', sm: '1.75rem', md: '2.5rem' },
+                    fontSize: '2.5rem',
                     fontWeight: 600,
                     lineHeight: 1.2,
                     justifyContent:'felx-start',
@@ -310,7 +321,7 @@ const About = () => {
                 <Typography
                   variant="body1"
                   sx={{ 
-                    fontSize: { xs: '0.75rem', sm: '0.8rem', md: '0.9rem' },
+                    fontSize: '1rem' ,
                     fontWeight: 400,
                     lineHeight: 1.6,
                     mb: { xs: 2, sm: 3 }

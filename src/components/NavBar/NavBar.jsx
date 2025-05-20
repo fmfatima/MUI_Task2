@@ -3,6 +3,10 @@ import Header from "../Header/Header.jsx";
 import Countdown from "../Countdown/Countdown.jsx";
 import About from "../About/About.jsx";
 import Discount from "../Discount/Discount.jsx";
+import Testimonial from "../Testimonial/Testimonial.jsx";
+import Qoute from "../Qoute/Qoute.jsx";
+import Faqs from "../Faqs/Faqs.jsx";
+import Qoute2 from "../Qoute2/Qoute2.jsx";
 
 
 const NavBar = () => (
@@ -22,7 +26,8 @@ const NavBar = () => (
             disableGutters
             sx={{
                 px: { xs: 2, sm: 3, md: 4 },
-                maxWidth: '100vw !important', // Force full width
+                maxWidth: '100% !important', // Force full width
+                // maxWidth: '100vw !important', // Force full width
                 width: '100%',
             }}
             >
@@ -37,7 +42,7 @@ const NavBar = () => (
             width: '100%',
         }}
         >
-        {/* Left: Logo/Brand Name */}
+        
         <Typography
             variant="h6"
             sx={{
@@ -50,7 +55,7 @@ const NavBar = () => (
             BlockSight
         </Typography>
 
-        {/* Right: Join Button */}
+        
         <Box>
             <Button
             variant="contained"
@@ -67,12 +72,16 @@ const NavBar = () => (
         </Box>
         </Toolbar>
         </Container>
-    </AppBar>
+    </AppBar> 
     <main>
         <Header />
         <Countdown />
         <About />
         <Discount />
+        <Testimonial />
+        <Qoute />
+        <Faqs />
+        <Qoute2 />
     </main>
     </>
 );

@@ -13,40 +13,44 @@ const Discount = () => {
         justifyContent: 'center',
         mt: 3,
         mb: 3,
+        p: 5,
+        backgroundColor:'#f8faf8'
         }}
         >
-            <Typography 
+        <Typography 
             variant="h2"
             color="black"
             gutterBottom
             sx={{
-                fontSize: { xs: '1rem', sm: '1.75rem', md: '2.75rem' },
-                fontWeight: 700,
-                fontfamily: 'roboto',
-                mx:'3rem',
+            fontSize: '3rem',
+            fontWeight: 700,
+            // fontFamily: 'Roboto',
             }}
-            >
+        >
             Claim Your Discount Now!
-            </Typography>
-            <Typography
+        </Typography>
+
+        <Typography
             variant="body1"
             sx={{
-                mb: 4,
-                fontSize: { xs: '0.75rem', sm: '0.8rem', md: '0.9rem' },
+            mb: 4,
+            fontSize: '1rem' , 
+            mx: '3rem',
+            maxWidth: '600px',   
             }}
-            >
-        We’re offering a special launch discount of $99 per month for our fully featured analytics platform. Join now before we raise the price.        
+        >
+            We’re offering a special launch discount of $99 per month for our fully featured analytics platform. Join now before we raise the price.
         </Typography>
 
        {/* here is the middle chiled box code */}
 
         <Box
-        sx={{
-        position: 'relative', // allows inner label to be absolutely positioned
-        mt: 3,
-        mb: 3,
-        }}
-    >
+            sx={{
+            position: 'relative', // allows inner label to be absolutely positioned
+            mt: 3,
+            mb: 3,
+            }}
+        >
         {/* The floating label on top border */}
         <Box
         sx={{
@@ -55,13 +59,17 @@ const Discount = () => {
             left: '50%',
             transform: 'translate(-50%, -50%)',
             backgroundColor: '#2acb6e',
-            px: 2,
-            py: 0.5,
-            // border: '1px solid #ccc',
-            // borderRadius: '16px',
+            // px: 2,
+            // py: 0.5,
+            width:'35%',
+            borderRadius:'4px',
+            height:'40px',
             fontWeight: 600,
-            fontSize: { xs: '0.7rem', sm: '0.8rem', md: '1rem' },
+            fontSize: { xs: '1rem', sm: '1.1rem', md: '1.25rem' },
             zIndex: 1,
+            display:'flex',
+            justifyContent:'center',
+            alignItems:'center',
         }}
         >
         Special 30% discount
@@ -70,13 +78,15 @@ const Discount = () => {
         {/* Main content box */}
         <Box
         sx={{
+            width: { xs: '100%', sm: '450px', md: '550px' },  
+            height: { xs: 'auto', sm: '450px', md: '490px' },
             textAlign: 'center',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
             backgroundColor: 'white',
-            boxShadow: '0 4px 20px rgba(0,0,0,0.09)',
+            boxShadow: '0 4px 6px rgba(0,0,0,0.09)',
             borderRadius: '2px',
             p: 5,
         }}
@@ -85,7 +95,7 @@ const Discount = () => {
             variant="body1"
             sx={{
             mb: 1,
-            fontSize: { xs: '0.75rem', sm: '0.8rem', md: '1.3rem' },
+            fontSize:  '1.5rem' ,
             }}
         >
             Launch Plan
@@ -94,8 +104,8 @@ const Discount = () => {
             variant="body1"
             sx={{
             mb: 4,
-            fontSize: { xs: '0.75rem', sm: '0.8rem', md: '1.3rem' },
-            fontWeight: '500',
+            fontSize: '2rem',
+            fontWeight: '600',
             }}
         >
             $99 per month
@@ -104,6 +114,8 @@ const Discount = () => {
             sx={{
             display: 'flex',
             flexDirection: 'column',
+            alignItems:'center',
+            textAlign:'center',
             gap: 1.5,
             mb: 4,
             }}
@@ -118,7 +130,7 @@ const Discount = () => {
                 <Typography
                 variant="body1"
                 sx={{
-                    fontSize: { xs: '0.75rem', sm: '0.8rem', md: '1.3rem' },
+                    fontSize: '1.3rem' ,
                     fontWeight: 500,
                 }}
                 >
@@ -132,10 +144,11 @@ const Discount = () => {
             variant="contained"
             color="primary"
             sx={{
-            width: '90%',
-            fontSize: '0.9rem',
-            fontWeight: 600,
-            px: 3,
+                fontSize: '1rem',
+                fontWeight: 600,
+                width: '100%',
+                maxWidth: '300px',
+                height: '48px',
             }}
         >
             Join Now
