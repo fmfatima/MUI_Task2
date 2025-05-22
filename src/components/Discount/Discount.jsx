@@ -1,5 +1,5 @@
 import {Box, Typography, Button} from "@mui/material"
-import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import CheckIcon from '@mui/icons-material/Check';
 
 const Discount = () => {
   return (
@@ -11,20 +11,22 @@ const Discount = () => {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        mt: 3,
-        mb: 3,
-        p: 5,
-        backgroundColor:'#f8faf8'
+        paddingTop: 4,
+        paddingBottom: 4,
+        backgroundColor:'#f8faf8',
+
+        position:'relative',
+        zIndex: 0,
         }}
         >
         <Typography 
             variant="h2"
-            color="black"
+            color="#2A2A2A"
             gutterBottom
             sx={{
-            fontSize: '3rem',
-            fontWeight: 700,
-            // fontFamily: 'Roboto',
+            fontSize: '48px',
+            fontWeight: 600,
+            fontfamily: 'Roboto',
             }}
         >
             Claim Your Discount Now!
@@ -34,8 +36,11 @@ const Discount = () => {
             variant="body1"
             sx={{
             mb: 4,
-            fontSize: '1rem' , 
-            mx: '3rem',
+            fontSize: '16px' , 
+            fontfamily: "Roboto",
+            fontWeight: 400,
+            color: '#2A2A2A',
+            // mx: '3rem',
             maxWidth: '600px',   
             }}
         >
@@ -48,7 +53,6 @@ const Discount = () => {
             sx={{
             position: 'relative', // allows inner label to be absolutely positioned
             mt: 3,
-            mb: 3,
             }}
         >
         {/* The floating label on top border */}
@@ -58,18 +62,18 @@ const Discount = () => {
             top: 0,
             left: '50%',
             transform: 'translate(-50%, -50%)',
-            backgroundColor: '#2acb6e',
-            // px: 2,
-            // py: 0.5,
+            backgroundColor: '#25CE8F',
             width:'35%',
-            borderRadius:'4px',
+            borderRadius:'2px',
             height:'40px',
-            fontWeight: 600,
-            fontSize: { xs: '1rem', sm: '1.1rem', md: '1.25rem' },
+            fontWeight: 400,
+            fontfamily :'Roboto',
+            fontSize: '18px',
             zIndex: 1,
             display:'flex',
             justifyContent:'center',
             alignItems:'center',
+            color:'white',
         }}
         >
         Special 30% discount
@@ -78,8 +82,8 @@ const Discount = () => {
         {/* Main content box */}
         <Box
         sx={{
-            width: { xs: '100%', sm: '450px', md: '550px' },  
-            height: { xs: 'auto', sm: '450px', md: '490px' },
+            width: { xs: '100%', sm: '450px', md: '500px' },  
+            height: { xs: 'auto', sm: '450px', md: '400px' },
             textAlign: 'center',
             display: 'flex',
             flexDirection: 'column',
@@ -88,14 +92,47 @@ const Discount = () => {
             backgroundColor: 'white',
             boxShadow: '0 4px 6px rgba(0,0,0,0.09)',
             borderRadius: '2px',
-            p: 5,
+
+            position: 'relative',
+            zIndex: 0,
         }}
         >
+            {/* This is a vector at left side */}
+        <Box
+        component="img"
+        src="./src/assets/Vector3.png"
+        alt="Top Left Decoration"
+        sx={{
+        position: 'absolute',
+        top: 350,
+        left: '-9%',
+        width:'98',
+        height: '50',
+        zIndex: -1,
+        }}
+        />
+
+        {/* This is a vector at righ side */}
+        <Box
+        component="img"
+        src="./src/assets/vector1.png"
+        alt="Top Left Decoration"
+        sx={{
+        position: 'absolute',
+        top: 100,
+        left: '93%',
+        zIndex: -1,
+        }}
+        />
+
         <Typography
             variant="body1"
             sx={{
             mb: 1,
-            fontSize:  '1.5rem' ,
+            fontSize:'24px' ,
+            fontfamily: 'Roboto',
+            fontWeight: 400,
+            mt: -5,
             }}
         >
             Launch Plan
@@ -103,12 +140,27 @@ const Discount = () => {
         <Typography
             variant="body1"
             sx={{
-            mb: 4,
-            fontSize: '2rem',
-            fontWeight: '600',
+            fontfamily: 'Roboto',
+            fontSize: '32px',
+            fontWeight: '500',
             }}
         >
             $99 per month
+        </Typography>
+
+        <Typography
+            variant="body1"
+            sx={{
+            mb: 3,
+            mt: -1,
+            fontfamily: 'Roboto',
+            fontSize: '16px',
+            fontWeight: '400',
+            color: '#9A9DA5',
+            textDecorationLine: 'line-through',
+            }}
+        >
+            $349 per month
         </Typography>
         <Box
             sx={{
@@ -121,17 +173,18 @@ const Discount = () => {
             }}
         >
             {[
-            'Community Access',
-            'All Past and Future Masterclasses',
-            'Exclusive Content Drops',
+            'Feature 1 Community Access',
+            'Feature 2 All Past and Future Masterclasses',
+            'Feature 3 Exclusive Content Drops',
             ].map((item, index) => (
             <Box key={index} sx={{ display: 'flex', alignItems: 'center' }}>
-                <CheckCircleIcon sx={{ color: 'green', fontSize: '1.2rem', mr: 1 }} />
+                <CheckIcon sx={{ color: 'green', fontSize: '1.2rem', mr: 1 }} />
                 <Typography
                 variant="body1"
                 sx={{
-                    fontSize: '1.3rem' ,
-                    fontWeight: 500,
+                    fontSize: '16px' ,
+                    fontWeight: 400,
+                    color: '#67677C',
                 }}
                 >
                 {item}
@@ -144,11 +197,12 @@ const Discount = () => {
             variant="contained"
             color="primary"
             sx={{
-                fontSize: '1rem',
+                fontSize: '16px',
                 fontWeight: 600,
                 width: '100%',
                 maxWidth: '300px',
                 height: '48px',
+                borderRadius: '2px',
             }}
         >
             Join Now

@@ -5,35 +5,23 @@ const Faqs = () => {
   return (
     <Box
       sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        px: 2,
-        p: 8,
-      }}
-    >
-      <Box
-        sx={{
-        //   p: { xs: 4, sm: 6, md: 10 },
-        //   boxShadow: '0 2px 4px rgba(178, 176, 176, 0.35)',
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
-          textAlign: 'center',
-        //   maxWidth: '800px',
-        //   width: '100%',
-        //   height: 'auto',
-        //   mx: 'auto',
-        }}
-      >
+          textAlign: 'start',
+        px: 2,
+        p: 8,
+      }}
+    >
+
         <Typography
           variant="h2"
-          color="black"
+          color="#2A2A2A"
           sx={{
-            fontSize: { xs: '2rem', sm: '2.25rem', md: '2.625rem' },
+            fontSize: '48px',
             fontWeight: 600,
+            fontfamily: 'Roboto',
             mb: 4,
           }}
         >
@@ -41,22 +29,46 @@ const Faqs = () => {
         </Typography>
 
         {/* FAQs Section */}
-        <Box>
-          <Accordion
-            sx={{
-                p:2,
+        <Box
+         sx={{
                 maxWidth:'900px',
                 border: 'none',
+                width: '100%',
+
+                position: 'relative',
+            }}
+        >
+            {/* vector on right side Decoration */}
+            <Box
+                component="img"
+                src="./src/assets/FaqVector.png"
+                alt="Bottom Right Decoration"
+                sx={{
+                position: 'absolute',
+                bottom: -10,
+                left: '123.7%',
+                // zIndex: -1,
+                }}
+            />
+
+          <Accordion
+            sx={{
+                // p:2,
+                // maxWidth:'900px',
+                border: 'none',
+                fontfamily: 'Roboto',
                 mb: 2,
-                '&::before': { display: 'none' }, // remove default MUI divider line
+                '&::before': { display: 'none' }, 
+                // width: '100%',
             }}
           >
             <AccordionSummary expandIcon={<ExpandMoreIcon />}>
               <Typography 
               variant='body1'
               sx={{
-                fontSize: { xs: '1.125rem', sm: '1.25rem', md: '1.375rem'},
-                fontWeight:'500',
+                fontSize: '20px',
+                fontWeight: 500,
+                color: '#2A2A2A'
               }}
               >
               What chains do you support?</Typography>
@@ -65,11 +77,12 @@ const Faqs = () => {
               <Typography 
               variant='body1'
               sx={{
-                fontSize: { xs: '0.875rem', sm: '0.9375rem', md: '1rem'},
-                fontWeight:'400',
+                fontSize: '16px',
+                fontWeight:400,
                 display:'flex',
                 justifyContent:'start',
-                alignItems:'start'
+                alignItems:'start',
+                color: '#747474',
               }}
               >
                 We currently support Ethereum mainnet. We have multi-chain support on our roadmap soon.
@@ -79,7 +92,7 @@ const Faqs = () => {
 
           <Accordion
             sx={{
-                p:2,
+                // p:2,
                 border: 'none',
                 mb: 2,
                 '&::before': { display: 'none' }, // remove default MUI divider line
@@ -89,8 +102,9 @@ const Faqs = () => {
               <Typography 
               variant='body1'
               sx={{
-                fontSize: { xs: '1.125rem', sm: '1.25rem', md: '1.375rem'},
-                fontWeight:'500',
+                fontSize: '20px',
+                fontWeight:500,
+                color: '#2A2A2A'
               }}
               >
             Can I pay in crypto?</Typography>
@@ -99,22 +113,23 @@ const Faqs = () => {
               <Typography 
               variant='body1'
               sx={{
-                fontSize: { xs: '0.875rem', sm: '0.9375rem', md: '1rem'},
-                fontWeight:'400',
+                fontSize: '16px',
+                fontWeight: 400,
                 display:'flex',
                 justifyContent:'start',
-                alignItems:'start'
+                alignItems:'start',
+                color: '#747474',
               }}
               >
                 We currently support Ethereum mainnet. We have multi-chain support on our roadmap soon.
+                
               </Typography>
             </AccordionDetails>
           </Accordion>
 
-          <Accordion 
+          <Accordion
             sx={{
-                p:2,
-                maxWidth:'800px',
+                // p:2,
                 border: 'none',
                 mb: 2,
                 '&::before': { display: 'none' }, // remove default MUI divider line
@@ -124,31 +139,33 @@ const Faqs = () => {
               <Typography 
               variant='body1'
               sx={{
-                fontSize: { xs: '1.125rem', sm: '1.25rem', md: '1.375rem'},
-                fontWeight:'500',
+                fontSize: '20px',
+                fontWeight: 500,
+                color: '#2A2A2A'
               }}
               >
-                Will You Raise the Price?</Typography>
+            Will You raise teh price?</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography 
               variant='body1'
               sx={{
-                fontSize: { xs: '0.875rem', sm: '0.9375rem', md: '1rem'},
-                fontWeight:'400',
+                fontSize: '16px',
+                fontWeight: 400,
                 display:'flex',
                 justifyContent:'start',
-                alignItems:'start'
+                alignItems:'start',
+                color: '#747474',
               }}
               >
                 We currently support Ethereum mainnet. We have multi-chain support on our roadmap soon.
+                
               </Typography>
             </AccordionDetails>
           </Accordion>
           
         </Box>
       </Box>
-    </Box>
   );
 };
 

@@ -11,9 +11,24 @@ const Qoute2 = () => {
         justifyContent: 'center',
         alignItems: 'center',
         px: 2, 
-        p: 8,
+        p: 10,
+        position: 'relative',
       }}
     >
+        {/* vector on right side Decoration */}
+            <Box
+                component="img"
+                src="./src/assets/Vector4.png"
+                alt="Bottom Right Decoration"
+                sx={{
+                position: 'absolute',
+                top: 10,
+                left: '-2%',
+                // zIndex: -1,
+                }}
+            />
+
+
       <Box
         sx={{
           p: { xs: 4, sm: 6, md: 10 },
@@ -28,13 +43,46 @@ const Qoute2 = () => {
           width: '100%',
           height:'auto',
           mx: 'auto',
+
+          position: 'relative',
+          zIndex: 0,         
         }}
-      >
+      > 
+       
+         {/* vector on right side Decoration */}
+            <Box
+                component="img"
+                src="./src/assets/Vector4.png"
+                alt="Bottom Right Decoration"
+                sx={{
+                position: 'absolute',
+                top: 160,
+                left: '93%',
+                zIndex: -1,
+                }}
+            />
+
+             {/* vector on left side Decoration */}
+            <Box
+                component="img"
+                src="./src/assets/Vector3.png"
+                alt="Bottom Right Decoration"
+                sx={{
+                position: 'absolute',
+                top: 290,
+                left: '-7%',
+                zIndex: -1,
+                }}
+            />
+
+
         <Typography
           variant="h2"
           color="black"
           sx={{
-            fontSize: { xs: '1.5rem', sm: '1.75rem', md: '3rem' },
+            fontSize: '48px',
+            fontfamily: 'Roboto',
+            color: '#2A2A2A',
             fontWeight: 600,
             mb: 2,
           }}
@@ -45,8 +93,10 @@ const Qoute2 = () => {
           variant="body1"
           color="black"
           sx={{
-            fontSize: { xs: '0.9rem', sm: '1rem', md: '1.5rem' },
-            fontWeight: 500,
+            fontSize: '24px',
+            fontWeight: 400,
+            fontfamily: 'Roboto',
+            color: '#2A2A2A',
           }}
         >
           Join with the special launch discount before registration closes on 
@@ -58,7 +108,7 @@ const Qoute2 = () => {
             sx={{
                 fontSize: '1rem',
                 fontWeight: 600,
-                width:'25%',
+                width:'40%',
                 height:'50px',
                 mt:3,
                 px: 3,
@@ -72,7 +122,7 @@ const Qoute2 = () => {
         sx={{
             width:'100%',
             height:'70px',
-            backgroundColor:'#0b016f',
+            backgroundColor:'#072336',
 
         }}
       />

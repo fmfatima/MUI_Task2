@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Box, Typography, Paper } from "@mui/material";
 
 const CountdownTimer = () => {
@@ -35,8 +35,40 @@ const CountdownTimer = () => {
         alignItems: 'center',
         px: { xs: 2, sm: 4 },
         py: { xs: 3, sm: 4 },
+        position: 'relative',
+        // width: 'fit-content',
+        mx: 'auto',
+        zIndex: 0,
       }}
     >
+      {/* This is at top right vector */}
+      <Box
+      component="img"
+      src="./src/assets/Vector3.png"
+      alt="Top RIght Decoration"
+      sx={{
+        position: 'absolute',
+        top: 10,
+        left: '78%',
+        zIndex: -1,
+      }}
+      />
+
+      {/* This is at bottom left vector */}
+      <Box
+      component="img"
+      src="./src/assets/Vector2.png"
+      alt="bottom left Decoration"
+      sx={{
+        position: 'absolute',
+        top: 190,
+        left: '5.5%',
+        width: '119',
+        height: '87',
+        zIndex: -1,
+      }}
+      /> 
+      
       <Paper
         elevation={3}
         sx={{

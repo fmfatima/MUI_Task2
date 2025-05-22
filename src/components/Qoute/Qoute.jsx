@@ -8,16 +8,20 @@ const Qoute = () => {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        px: 2, 
-        p: 8,
+        // px: 2, 
+        p: 2,
+        marginTop: 10,
+        marginBottom: 10,
       }}
     >
+      
       <Box
         sx={{
           p: { xs: 4, sm: 6, md: 8 },
         //   border: '1px solid black',
-          boxShadow: '0 2px 4px rgba(178, 176, 176, 0.35)',
+          boxShadow: '2px 4px 12px rgba(178, 176, 176, 0.35)',
           display: 'flex',
+        //   backgroundColor: 'white',
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
@@ -25,13 +29,49 @@ const Qoute = () => {
           maxWidth: '800px',
           width: '100%',
           mx: 'auto',
+
+        position: 'relative',       
+        zIndex: 0,
         }}
       >
+        {/* Add rectangle to the top left and right bottom of the BOX */}
+      {/* Top Left Decoration */}
+      <Box
+        component="img"
+        src="./src/assets/recImg.png"
+        alt="Top Left Decoration"
+        sx={{
+          position: 'absolute',
+          top: -10,
+          left: -10,
+          zIndex: -1,
+          width: '277',
+          height: '149',
+        }}
+      />
+
+      {/* Bottom Right Decoration */}
+      <Box
+        component="img"
+        src="./src/assets/recImg.png"
+        alt="Bottom Right Decoration"
+        sx={{
+          position: 'absolute',
+          bottom: -10,
+          right: -10,
+          zIndex: -1,
+        width: '277',
+          height: '149',
+        }}
+      />
+
+
         <Typography
           variant="h2"
-          color="black"
+          color="#2A2A2A"
           sx={{
-            fontSize: { xs: '1.5rem', sm: '1.75rem', md: '2rem' },
+            fontSize: '32px',
+            fontfamily: 'Roboto',
             fontWeight: 600,
             mb: 2,
           }}
@@ -40,10 +80,12 @@ const Qoute = () => {
         </Typography>
         <Typography
           variant="body1"
-          color="black"
+          color="#747474"
           sx={{
-            fontSize: { xs: '0.9rem', sm: '1rem', md: '1.1rem' },
-            fontWeight: 500,
+            fontSize: '16px',
+            fontWeight: 400,
+            fontfamily: 'Roboto',
+            
           }}
         >
           This class is designed to teach you how to create flash loans with smart contracts.

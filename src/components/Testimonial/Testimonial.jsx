@@ -37,16 +37,19 @@ const Testimonial = () => {
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
-          mx: { xs: 2, sm: 3, md: 4 },
-          mb: 3
+
+          margin: 3,
+          paddingTop: 5,
         }}
       >
         <Typography
           variant="h2"
           color="black"
           sx={{
-            fontSize: { xs: '2rem', sm: '2.25rem', md: '3.5rem' },
-            fontWeight: 700,
+            fontSize: '48px',
+            fontWeight: 600,
+            fontfamily: 'Roboto',
+            color:'#2A2A2A',
           }}
         >
           What Our Users are Saying
@@ -70,7 +73,6 @@ const Testimonial = () => {
           gap: 2,
           overflowX: 'auto',
           scrollBehavior: 'smooth',
-          px: 2,
           '&::-webkit-scrollbar': { display: 'none' }
         }}
       >
@@ -78,15 +80,17 @@ const Testimonial = () => {
           <Card
             key={i}
             sx={{
-                width: { xs: 260, sm: 280, md: 320 },     // 📱 Mobile -> 💻 Desktop
-                height: { xs: 240, sm: 260, md: 300 },    // 🔒 Match width
+                width: { xs: 260, sm: 280, md: 320 },     
+                // height: { xs: 240, sm: 260, md: 300 },    
                 flex: '0 0 auto',
                 borderRadius: 2,
-                boxShadow: '0 6px 10px -4px rgba(0,0,0,0.2)',
+                boxShadow: '2px 4px 12px rgba(20, 20, 20, 0.18)',
                 display: 'flex',
                 alignItems: 'flex-start',
                 transition: '0.3s',
-                overflow: 'hidden'
+                overflow: 'hidden',
+                marginTop: 5,
+                marginBottom: 4,
             }}
             >
 
@@ -98,7 +102,7 @@ const Testimonial = () => {
                 flexDirection: 'column',
                 justifyContent: 'flex-start',
                 textAlign: 'left',
-                p: { xs: 2, sm: 3 },
+                // p: { xs: 2, sm: 3 },
                 overflow: 'hidden'
                 }}
                 >
@@ -106,9 +110,10 @@ const Testimonial = () => {
               <Typography
                 variant="h6"
                 sx={{
-                  fontWeight: 700,
-                  mb: 1,
-                  fontSize: { xs: '1rem', sm: '1.1rem', md: '1.25rem' }
+                  fontWeight: 600,
+                  mb: 2,
+                  fontSize: '16px semibold',
+                  fontfamily: 'Urbanist',
                 }}
               >
                 {item.name}
@@ -116,9 +121,11 @@ const Testimonial = () => {
               <Typography
                 variant="body2"
                 sx={{
-                    fontSize: { xs: '0.875rem', sm: '1rem' },
+                    fontSize: '16px',
+                    fontfamily:'Roboto',
+                    fontWeight: 400,
                     lineHeight: 1.5,
-                    color: 'text.secondary',
+                    color: '#252525',
                     overflow: 'hidden',
                     textOverflow: 'ellipsis',
                     display: '-webkit-box',
@@ -136,8 +143,8 @@ const Testimonial = () => {
             display:'flex',
             justifyContent:'center',
             alignItems: 'center',
-          mx: { xs: 2, sm: 3, md: 4 },
-          mb: 3
+            mx: { xs: 2, sm: 3, md: 4 },
+            mb: 3
         }}
       >
         <Button

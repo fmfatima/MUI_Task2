@@ -9,13 +9,15 @@ const Countdown = () => {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        px: { xs: 2, sm: 4, md: 6 },
+        // px: { xs: 2, sm: 4, md: 6 },
         backgroundColor: '#f9f9f9',
         textAlign: 'center',
-        py: { xs: 4, sm: 5, md: 6 },
-        mt: 5,
+  
       }}
     >
+      
+
+
       <Container maxWidth="md">
         <Box
           sx={{
@@ -23,16 +25,17 @@ const Countdown = () => {
             flexDirection: 'column',
             justifyContent: 'center',
             alignItems: 'center',
-            gap: { xs: 2, sm: 3, md: 4 },
           }}
         >
           <Typography
             variant="h2"
             color="black"
             sx={{
-              fontSize: { xs: '2rem', sm: '2.25rem', md: '2.625rem' }, // Responsive size
-              fontWeight: 700,
-              fontFamily: 'Roboto, sans-serif',
+              fontSize: '48px', // Responsive size
+              fontWeight: 600,
+              fontfamily: "Roboto",
+              color: '#2A2A2A',
+              marginBottom: 5,
             }}
           >
             Hurry, your invitation expires soon!
@@ -41,12 +44,13 @@ const Countdown = () => {
           <Typography
             variant="body1"
             sx={{
-              fontSize: { xs: '1.125rem', sm: '1.25rem', md: '1.375rem', },
-              maxWidth: '600px',
-              color: '#444',
+              fontSize: '24px',
+              maxWidth: '800px',
+              fontfamily: "Roboto",
+              color: '#2A2A2A',
             }}
           >
-            Blocksight registration will close on Wednesday, April 6th @ 11:59 Central Time.
+            Blocksight registration will close onBlocksight registration will close on Wednesday, April 6th @ 11:59 Central Time.
           </Typography>
 
           <CountDownTimer />
@@ -54,9 +58,11 @@ const Countdown = () => {
           <Typography
             variant="body2"
             sx={{
-              fontSize: {  xs: '0.875rem', sm: '0.9375rem', md: '1rem',  },
-              maxWidth: '400px',
-              color: '#666',
+              maxWidth: '500px',
+              fontSize: '16px',
+              fontWeight: 400,
+              fontfamily: "Roboto",
+              color: '#5E5E62',
             }}
           >
             No one will be admitted after registration closes. When it opens again, we’ll raise the price.
@@ -66,12 +72,12 @@ const Countdown = () => {
             variant="contained"
             color="primary"
             sx={{
-              fontSize: { xs: '0.85rem', sm: '1rem' },
-              fontWeight: 600,
-              px: { xs: 3, sm: 4 },
-              py: { xs: 1.25, sm: 1.5 },
-              borderRadius: '8px',
-              mt: 2,
+              width: '323px',
+              height: ' 50px',
+              fontSize: '14px',
+              fontWeight: 400,
+              borderRadius: '2px',
+              mt: 4,
             }}
           >
             Hold your Spot Now

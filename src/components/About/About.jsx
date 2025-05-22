@@ -9,7 +9,7 @@ const About = () => {
             flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
-            mt: 3,
+            mt: 10,
             mb: 3,
           }}
         >
@@ -18,9 +18,10 @@ const About = () => {
             color="black"
             gutterBottom
             sx={{
-                 fontSize: '3rem' ,
-                fontWeight: 700,
-                fontfamily: 'roboto',
+                fontSize: '48px' ,
+                fontWeight: 600,
+                fontfamily: 'Roboto',
+                color: '#2A2A2A',
                 mx:'3rem',
             }}
             >
@@ -30,8 +31,11 @@ const About = () => {
             variant="body1"
             sx={{
                 mb: 4,
-                fontSize: '1.4rem', 
-                maxWidth:'800px',
+                fontSize: '16px',
+                fontfamily: 'Roboto',
+                fontWeight: 400,
+                color: '#747474', 
+                maxWidth:'700px',
             }}
             >
           See how to use our advanced blockchain analytics platform to cut through the noise and gain actionable insights into the crypto & NFT markets.
@@ -42,6 +46,7 @@ const About = () => {
         
         sx={{ py: 1, px: 4, maxWidth: '100%', mx: 'auto',
             minHeight: '100vh',
+            marginBottom: 8,
          }}>
 
         {/* Section 1: */}
@@ -49,9 +54,6 @@ const About = () => {
             <Box
                 sx={{
                 mx:{md: 20},
-                px: { xs: 2, sm: 3, md: 4 },
-                py: { xs: 3, sm: 4 },
-                // border:'1px solid black',
                 maxWidth: '400px',
                 height: '100%',
                 display: 'flex',
@@ -59,19 +61,36 @@ const About = () => {
                 flexDirection: 'column',
                 alignItems: 'flex-start', 
                 textAlign: 'start',
+
+                position: 'relative',  
+                zIndex: 0,
                 }}
             >
+                {/* This is a vector at left side */}
+                <Box
+                component="img"
+                src="./src/assets/Vector4.png"
+                alt="Top Left Decoration"
+                sx={{
+                position: 'absolute',
+                top: 160,
+                left: '-16.5%',
+                zIndex: 0,
+                }}
+                />
+
                 <Typography
                   variant="h4"
                   color="primary"
                   sx={{ 
-                    color: ' black',
-                    fontSize:'2.5rem' ,
+                    color: '#2A2A2A',
+                    fontfamily: 'Roboto',
+                    fontSize:'32px' ,
                     fontWeight: 600,
                     lineHeight: 1.2,
                     justifyContent:'felx-start',
                     alignItems: 'start',
-                    mb: { xs: 1, sm: 2 }
+                    mb: 2,
                   }}
                 >
                   Be Early
@@ -147,10 +166,10 @@ const About = () => {
             <Box
                 sx={{
                 mx:{md: 20},
-                px: { xs: 2, sm: 3, md: 4 },
-                py: { xs: 3, sm: 4 },
+                // px: { xs: 2, sm: 3, md: 4 },
+                // py: { xs: 3, sm: 4 },
                 // border:'1px solid black',
-                maxWidth: '400px',
+                maxWidth: '500px',
                 height: '100%',
                 display: 'flex',
                 justifyContent:'center',
@@ -163,11 +182,11 @@ const About = () => {
                   variant="h4"
                   color="primary"
                   sx={{ 
-                    color: ' black',
-                    fontSize: '2.5rem' ,
+                    color: '#2A2A2A',
+                    fontSize: '32px' ,
                     fontWeight: 600,
-                    lineHeight: 1.2,
-                    justifyContent:'felx-start',
+                    // lineHeight: 1.2,
+                    justifyContent:'flex-start',
                     alignItems: 'start',
                     mb: { xs: 1, sm: 2 }
                   }}
@@ -193,9 +212,6 @@ const About = () => {
             <Box
                 sx={{
                 mx:{md: 20},
-                px: { xs: 2, sm: 3, md: 4 },
-                py: { xs: 3, sm: 4 },
-                // border:'1px solid black',
                 maxWidth: '400px',
                 height: '100%',
                 display: 'flex',
@@ -209,10 +225,10 @@ const About = () => {
                   variant="h4"
                   color="primary"
                   sx={{ 
-                    color: ' black',
-                    fontSize: '2.5rem' ,
+                    fontfamily: 'Roboto',
+                    fontSize:'32px' ,
                     fontWeight: 600,
-                    lineHeight: 1.2,
+                    color: '#2A2A2A',
                     justifyContent:'felx-start',
                     alignItems: 'start',
                     mb: { xs: 1, sm: 2 }
@@ -269,9 +285,10 @@ const About = () => {
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
-                px: { xs: 2, sm: 3, md: 4 }
+                px: { xs: 2, sm: 3, md: 4 },
               }}
             >
+
                 <Box
                   component="img"
                   src="./src/assets/frame.png"
@@ -291,9 +308,6 @@ const About = () => {
             <Box
                 sx={{
                 mx:{md: 20},
-                px: { xs: 2, sm: 3, md: 4 },
-                py: { xs: 3, sm: 4 },
-                // border:'1px solid black',
                 maxWidth: '400px',
                 height: '100%',
                 display: 'flex',
@@ -301,17 +315,31 @@ const About = () => {
                 flexDirection: 'column',
                 alignItems: 'flex-start', 
                 textAlign: 'start',
+
+                position: 'relative',
                 }}
             >
+                 {/* This is a vector at right side */}
+                <Box
+                component="img"
+                src="./src/assets/Vector.png"
+                alt="Top Left Decoration"
+                sx={{
+                position: 'absolute',
+                top: 230,
+                right: '-48.5%',
+                zIndex: 0,
+                }}
+                />
                 <Typography
                   variant="h4"
                   color="primary"
                   sx={{ 
-                    color: ' black',
-                    fontSize: '2.5rem',
+                    color: '#2A2A2A',
+                    fontSize: '32px' ,
+                    fontfamily: 'Roboto',
                     fontWeight: 600,
-                    lineHeight: 1.2,
-                    justifyContent:'felx-start',
+                    justifyContent:'flex-start',
                     alignItems: 'start',
                     mb: { xs: 1, sm: 2 }
                   }}

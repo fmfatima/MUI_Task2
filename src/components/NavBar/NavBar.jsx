@@ -15,45 +15,36 @@ const NavBar = () => (
         position="static" 
         sx={{
         backgroundColor: 'white',
-        color: 'black',
-        boxShadow: '0 4px 20px rgba(0,0,0,0.08)',
-        width: '100vw', 
-        left: 0,
+        // color: 'black',
+        boxShadow: 'none',
+        width: '100%', 
+        padding: 0,
         }}
         >
         <Container
             maxWidth={false}
             disableGutters
             sx={{
-                px: { xs: 2, sm: 3, md: 4 },
-                maxWidth: '100% !important', // Force full width
-                // maxWidth: '100vw !important', // Force full width
-                width: '100%',
+                paddingTop: 1,
             }}
-            >
+        >
         <Toolbar
         disableGutters
         sx={{
             minHeight: { xs: '56px', sm: '64px' },
-            px: { xs: 2, sm: 4 },
+            // px: { xs: 2, sm: 4 },
+            paddingLeft:3,
+            paddingRight:3,
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'center',
-            width: '100%',
+            // width: '100%',
         }}
         >
         
-        <Typography
-            variant="h6"
-            sx={{
-            fontSize: { xs: '1.25rem', sm: '1.5rem' },
-            fontWeight: 700,
-            color: 'black',
-            }}
-        >
-            <img src='./src/assets/logo.png'  />
-            BlockSight
-        </Typography>
+        {/* <Typography> */}
+            <img src='./src/assets/logo1.png'  />
+        {/* </Typography> */}
 
         
         <Box>
@@ -61,10 +52,13 @@ const NavBar = () => (
             variant="contained"
             color="primary"
             sx={{
+                borderRadius:'3px',
                 fontSize: '0.9rem',
-                fontWeight: 600,
-                border: 2,
-                px: 3,
+                fontWeight: 500,
+                width:'200px',
+                height: '50px',
+                // border: 2,
+                // px: 3,
             }}
             >
             Join Now
