@@ -9,8 +9,7 @@ const Header = () => {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        // px: 2,
-        // mt:4,
+
         width: '100%',
         textAlign: 'center',
       }}
@@ -105,8 +104,8 @@ const Header = () => {
         alt="Top Left Decoration"
         sx={{
           position: 'absolute',
-          top: -10,
-          left: -10,
+          top: -15,
+          left: -15,
           zIndex: -1,
         }}
       />
@@ -118,8 +117,8 @@ const Header = () => {
         alt="Bottom Right Decoration"
         sx={{
           position: 'absolute',
-          bottom: -10,
-          right: -10,
+          bottom: -15,
+          right: -15,
           zIndex: -1,
         }}
       />

@@ -13,6 +13,8 @@ const Qoute2 = () => {
         px: 2, 
         p: 10,
         position: 'relative',
+        zIndex: 0,
+
       }}
     >
         {/* vector on right side Decoration */}
@@ -24,40 +26,29 @@ const Qoute2 = () => {
                 position: 'absolute',
                 top: 10,
                 left: '-2%',
-                // zIndex: -1,
+                zIndex: -1,
                 }}
             />
 
-
-      <Box
+      <Box 
         sx={{
-          p: { xs: 4, sm: 6, md: 10 },
-        //   border: '1px solid black',
-          boxShadow: '0 2px 4px rgba(178, 176, 176, 0.35)',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-          textAlign: 'center',
-          maxWidth: '800px',
-          width: '100%',
-          height:'auto',
-          mx: 'auto',
-
           position: 'relative',
-          zIndex: 0,         
+          zIndex: 0, 
+          maxWidth: '960px',
+          width: '100%',
+          height:'380px',
+          overflow: 'visible',
         }}
-      > 
-       
-         {/* vector on right side Decoration */}
+      >
+        {/* vector on right side Decoration */}
             <Box
                 component="img"
                 src="./src/assets/Vector4.png"
                 alt="Bottom Right Decoration"
                 sx={{
                 position: 'absolute',
-                top: 160,
-                left: '93%',
+                top: '40%',
+                right: '-5%',
                 zIndex: -1,
                 }}
             />
@@ -69,12 +60,32 @@ const Qoute2 = () => {
                 alt="Bottom Right Decoration"
                 sx={{
                 position: 'absolute',
-                top: 290,
-                left: '-7%',
+                top: '90%',
+                left: '-6%',
                 zIndex: -1,
                 }}
             />
 
+          {/* This box under this line is typography box */}
+          <Box
+        sx={{
+              p: { xs: 4, sm: 6, md: 10 },
+              boxShadow: '0 2px 4px rgba(178, 176, 176, 0.35)',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
+              textAlign: 'center',
+              maxWidth: '800px',
+              width: '100%',
+              height: 'auto',
+              mx: 'auto',
+              backgroundColor: '#FFFFFF', 
+              position: 'relative',
+              zIndex: 1,
+              // border: '2px solid red',
+        }}
+      > 
 
         <Typography
           variant="h2"
@@ -104,12 +115,13 @@ const Qoute2 = () => {
         </Typography>
         <Button
             variant="contained"
-            color="primary"
+            // color="primary"
             sx={{
                 fontSize: '1rem',
                 fontWeight: 600,
-                width:'40%',
-                height:'50px',
+                width:'323px',
+                height:'56px',
+                backgroundColor:'#0264E1',
                 mt:3,
                 px: 3,
             }}
@@ -117,6 +129,11 @@ const Qoute2 = () => {
             Join Now
         </Button>
       </Box>
+      {/* Typography box end */}
+
+      </Box>
+
+      
     </Box>
     <Box
         sx={{

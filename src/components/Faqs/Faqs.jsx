@@ -10,8 +10,8 @@ const Faqs = () => {
           justifyContent: 'center',
           alignItems: 'center',
           textAlign: 'start',
-        px: 2,
-        p: 8,
+          px: 2,
+          p: 8,
       }}
     >
 
@@ -32,9 +32,7 @@ const Faqs = () => {
         <Box
          sx={{
                 maxWidth:'900px',
-                border: 'none',
                 width: '100%',
-
                 position: 'relative',
             }}
         >
@@ -45,33 +43,123 @@ const Faqs = () => {
                 alt="Bottom Right Decoration"
                 sx={{
                 position: 'absolute',
-                bottom: -10,
                 left: '123.7%',
-                // zIndex: -1,
                 }}
             />
 
           <Accordion
             sx={{
-                // p:2,
-                // maxWidth:'900px',
-                border: 'none',
-                fontfamily: 'Roboto',
-                mb: 2,
-                '&::before': { display: 'none' }, 
-                // width: '100%',
+              width: '970px',
+              boxShadow: '0 4px 4px rgba(114, 113, 113, 0.07)',
+              border: 'none',
+              '&::before': {
+                display: 'none',
+              },
+              mb: 2,
+              fontFamily: 'Roboto',
             }}
           >
-            <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon sx={{ width: '32px', height: '32px', color: '#2187D0' }} />}
+            >
+              <Typography
+                variant="body1"
+                sx={{
+                  fontSize: '24px',
+                  fontWeight: 500,
+                  color: '#2A2A2A',
+                  marginLeft: 3,
+                }}
+              >
+                What chains do you support?
+              </Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography
+                variant="body1"
+                sx={{
+                  fontSize: '16px',
+                  fontWeight: 400,
+                  display: 'flex',
+                  justifyContent: 'start',
+                  alignItems: 'start',
+                  color: '#747474',
+                  marginLeft: 3,
+                }}
+              >
+                We currently support Ethereum mainnet. We have multi-chain support on our roadmap soon.
+              </Typography>
+            </AccordionDetails>
+          </Accordion>
+
+
+          <Accordion
+            sx={{
+              width: '970px',
+              boxShadow: '0 4px 4px rgba(114, 113, 113, 0.07)',
+              border: 'none',
+              '&::before': {
+                display: 'none',
+              },
+              mb: 2,
+              fontFamily: 'Roboto',
+            }}
+          >
+            <AccordionSummary expandIcon={<ExpandMoreIcon sx={{width: '32px', height: '32px', color: '#2187D0'}}/>}>
               <Typography 
               variant='body1'
               sx={{
-                fontSize: '20px',
+                fontSize: '24px',
                 fontWeight: 500,
-                color: '#2A2A2A'
+                color: '#2A2A2A',
+                marginLeft: 3, 
               }}
               >
-              What chains do you support?</Typography>
+            Can I pay in crypto?</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography 
+              variant='body1'
+              sx={{
+               fontSize: '16px',
+                fontWeight:400,
+                display:'flex',
+                justifyContent:'start',
+                alignItems:'start',
+                color: '#747474',
+                marginLeft:3, 
+              }}
+              >
+                We currently support Ethereum mainnet. We have multi-chain support on our roadmap soon.
+                We currently support Ethereum mainnet. We have multi-chain support on our roadmap soon.
+                
+              </Typography>
+            </AccordionDetails>
+          </Accordion>
+
+          <Accordion
+            sx={{
+              width: '970px',
+              boxShadow: '0 4px 4px rgba(114, 113, 113, 0.07)',
+              border: 'none',
+              '&::before': {
+                display: 'none',
+              },
+              mb: 2,
+              fontFamily: 'Roboto',
+            }}
+          >
+            <AccordionSummary expandIcon={<ExpandMoreIcon sx={{width: '32px', height: '32px', color: '#2187D0'}}/>}>
+              <Typography 
+              variant='body1'
+              sx={{
+                fontSize: '24px',
+                fontWeight: 500,
+                color: '#2A2A2A',
+                marginLeft: 3, 
+              }}
+              >
+            Will You raise the price?</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography 
@@ -83,83 +171,12 @@ const Faqs = () => {
                 justifyContent:'start',
                 alignItems:'start',
                 color: '#747474',
+                marginLeft:3, 
+                marginTop: -2,
               }}
               >
                 We currently support Ethereum mainnet. We have multi-chain support on our roadmap soon.
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
-
-          <Accordion
-            sx={{
-                // p:2,
-                border: 'none',
-                mb: 2,
-                '&::before': { display: 'none' }, // remove default MUI divider line
-            }}
-          >
-            <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-              <Typography 
-              variant='body1'
-              sx={{
-                fontSize: '20px',
-                fontWeight:500,
-                color: '#2A2A2A'
-              }}
-              >
-            Can I pay in crypto?</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography 
-              variant='body1'
-              sx={{
-                fontSize: '16px',
-                fontWeight: 400,
-                display:'flex',
-                justifyContent:'start',
-                alignItems:'start',
-                color: '#747474',
-              }}
-              >
                 We currently support Ethereum mainnet. We have multi-chain support on our roadmap soon.
-                
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
-
-          <Accordion
-            sx={{
-                // p:2,
-                border: 'none',
-                mb: 2,
-                '&::before': { display: 'none' }, // remove default MUI divider line
-            }}
-          >
-            <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-              <Typography 
-              variant='body1'
-              sx={{
-                fontSize: '20px',
-                fontWeight: 500,
-                color: '#2A2A2A'
-              }}
-              >
-            Will You raise teh price?</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography 
-              variant='body1'
-              sx={{
-                fontSize: '16px',
-                fontWeight: 400,
-                display:'flex',
-                justifyContent:'start',
-                alignItems:'start',
-                color: '#747474',
-              }}
-              >
-                We currently support Ethereum mainnet. We have multi-chain support on our roadmap soon.
-                
               </Typography>
             </AccordionDetails>
           </Accordion>

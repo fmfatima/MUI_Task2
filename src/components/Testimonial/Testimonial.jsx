@@ -29,7 +29,14 @@ const Testimonial = () => {
   };
 
   return (
-    <Box sx={{ py: { xs: 4, sm: 5, md: 6 }, px: 0, maxWidth: '1440px', mx: 'auto' }}>
+    <Box 
+    sx={{ 
+      py: { xs: 4, sm: 5, md: 6 }, 
+      px: 0, 
+      maxWidth: '1520px', 
+      mx: 'auto', 
+      // backgroundColor: 'grey'
+    }}>
 
       {/* Header with Arrows */}
       <Box
@@ -37,9 +44,11 @@ const Testimonial = () => {
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
-
-          margin: 3,
+          // marginLeft:5,
+          paddingLeft: 5,
+          paddingRight: 5,
           paddingTop: 5,
+          // width: '100%',
         }}
       >
         <Typography
@@ -55,12 +64,12 @@ const Testimonial = () => {
           What Our Users are Saying
         </Typography>
 
-        <Box sx={{ display: 'flex', gap: 1 }}>
-          <IconButton onClick={() => scroll('left')}>
-            <ArrowBackIos />
+        <Box sx={{ display: 'flex', gap: 2, }}>
+          <IconButton onClick={() => scroll('left')} >
+            <ArrowBackIos sx={{ color: '#2187D0' }} />
           </IconButton>
           <IconButton onClick={() => scroll('right')}>
-            <ArrowForwardIos />
+            <ArrowForwardIos sx={{ color: '#2187D0' }} />
           </IconButton>
         </Box>
       </Box>
@@ -102,7 +111,6 @@ const Testimonial = () => {
                 flexDirection: 'column',
                 justifyContent: 'flex-start',
                 textAlign: 'left',
-                // p: { xs: 2, sm: 3 },
                 overflow: 'hidden'
                 }}
                 >
@@ -111,7 +119,7 @@ const Testimonial = () => {
                 variant="h6"
                 sx={{
                   fontWeight: 600,
-                  mb: 2,
+                  // mb: 2,
                   fontSize: '16px semibold',
                   fontfamily: 'Urbanist',
                 }}
@@ -143,20 +151,21 @@ const Testimonial = () => {
             display:'flex',
             justifyContent:'center',
             alignItems: 'center',
-            mx: { xs: 2, sm: 3, md: 4 },
             mb: 3
         }}
       >
         <Button
             variant="contained"
-            color="primary"
+          
             sx={{
+                borderRadius:'4px',
                 fontSize: '1rem',
                 fontWeight: 600,
-                width:'25%',
-                height:'50px',
+                width:'323px',
+                height:'56px',
                 mt:3,
-                px: 3,
+                // px: 3,
+                backgroundColorcolor : "#0264E1",
             }}
             >
             Join Now

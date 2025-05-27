@@ -4,41 +4,32 @@ const Qoute = () => {
   return (
     <Box
       sx={{
-        // height: '100vh',
         display: 'flex',
+        flexDirection:'column',
         justifyContent: 'center',
         alignItems: 'center',
-        // px: 2, 
         p: 2,
         marginTop: 10,
         marginBottom: 10,
       }}
     >
-      
       <Box
         sx={{
-          p: { xs: 4, sm: 6, md: 8 },
-        //   border: '1px solid black',
-          boxShadow: '2px 4px 12px rgba(178, 176, 176, 0.35)',
-          display: 'flex',
-        //   backgroundColor: 'white',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-          textAlign: 'center',
-          maxWidth: '800px',
+          // border: '1px solid red',
+          position: 'relative',
+          zIndex: 0, 
+          maxWidth: '930px',
           width: '100%',
           mx: 'auto',
-
-        position: 'relative',       
-        zIndex: 0,
+          overflow: 'visible',
         }}
       >
+         
         {/* Add rectangle to the top left and right bottom of the BOX */}
       {/* Top Left Decoration */}
       <Box
         component="img"
-        src="./src/assets/recImg.png"
+        src="./src/assets/qoute1.png"
         alt="Top Left Decoration"
         sx={{
           position: 'absolute',
@@ -53,18 +44,39 @@ const Qoute = () => {
       {/* Bottom Right Decoration */}
       <Box
         component="img"
-        src="./src/assets/recImg.png"
+        src="./src/assets/qoute1.png"
         alt="Bottom Right Decoration"
         sx={{
           position: 'absolute',
           bottom: -10,
           right: -10,
           zIndex: -1,
-        width: '277',
+          width: '277',
           height: '149',
         }}
       />
 
+        {/* the box typography is here */}
+
+        <Box
+        sx={{
+          p: { xs: 4, sm: 6, md: 8 },
+          // border: '1px solid black',
+          boxShadow: '2px 4px 12px rgba(178, 176, 176, 0.35)',
+          display: 'flex',
+          backgroundColor: 'white',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          textAlign: 'center',
+          maxWidth: '800px',
+          width: '100%',
+          mx: 'auto',
+
+        position: 'relative',       
+        zIndex: 0,
+        }}
+      >
 
         <Typography
           variant="h2"
@@ -92,6 +104,12 @@ const Qoute = () => {
           This is for educational purposes only, and we do not guarantee any profit from attending the class.
         </Typography>
       </Box>
+
+      {/* the box ends here */}
+
+      </Box> 
+
+      
     </Box>
   );
 };

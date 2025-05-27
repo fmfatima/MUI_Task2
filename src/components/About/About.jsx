@@ -337,8 +337,8 @@ const About = () => {
                   sx={{ 
                     color: '#2A2A2A',
                     fontSize: '32px' ,
-                    fontfamily: 'Roboto',
                     fontWeight: 600,
+                    // lineHeight: 1.2,
                     justifyContent:'flex-start',
                     alignItems: 'start',
                     mb: { xs: 1, sm: 2 }

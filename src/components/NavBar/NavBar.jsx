@@ -15,7 +15,6 @@ const NavBar = () => (
         position="static" 
         sx={{
         backgroundColor: 'white',
-        // color: 'black',
         boxShadow: 'none',
         width: '100%', 
         padding: 0,
@@ -31,42 +30,43 @@ const NavBar = () => (
         <Toolbar
         disableGutters
         sx={{
-            minHeight: { xs: '56px', sm: '64px' },
-            // px: { xs: 2, sm: 4 },
-            paddingLeft:3,
-            paddingRight:3,
+            minHeight: { xs: 56, sm: 64 },
+            px: { xs: 2, sm: 3, md: 4, lg: 6 }, // Responsive padding (left and right)
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'center',
-            // width: '100%',
         }}
         >
-        
-        {/* <Typography> */}
-            <img src='./src/assets/logo1.png'  />
-        {/* </Typography> */}
+        {/* Logo */}
+        <Box
+            component="img"
+            src="./src/assets/logo1.png"
+            alt="Logo"
+            sx={{
+            height: { xs: 28, sm: 36, md: 40, lg: 44 }, // Responsive logo size
+            objectFit: 'contain',
+            }}
+        />
 
-        
+        {/* Button */}
         <Box>
             <Button
             variant="contained"
-            color="primary"
             sx={{
-                borderRadius:'3px',
-                fontSize: '0.9rem',
-                fontWeight: 500,
-                width:'200px',
-                height: '50px',
-                // border: 2,
-                // px: 3,
+                borderRadius: '3px',
+                fontSize: { xs: '12px', sm: '14px', md: '16px', lg: '18px', },
+                fontWeight: 600,
+                width: { xs: '120px', sm: '140px', md: '160px', lg: '200px', },
+                height: { xs: '40px', sm: '48px', md: '52px', lg: '56px', },
+                backgroundColor: '#0264E1',
             }}
             >
             Join Now
             </Button>
         </Box>
         </Toolbar>
-        </Container>
-    </AppBar> 
+    </Container>
+    </AppBar>
     <main>
         <Header />
         <Countdown />

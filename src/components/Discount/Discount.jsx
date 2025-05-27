@@ -13,8 +13,7 @@ const Discount = () => {
         justifyContent: 'center',
         paddingTop: 4,
         paddingBottom: 4,
-        backgroundColor:'#f8faf8',
-
+        backgroundColor:'#F9FAFB',
         position:'relative',
         zIndex: 0,
         }}
@@ -47,7 +46,45 @@ const Discount = () => {
             We’re offering a special launch discount of $99 per month for our fully featured analytics platform. Join now before we raise the price.
         </Typography>
 
-       {/* here is the middle chiled box code */}
+            {/* this is the box where vectors designs */}
+        <Box
+            sx={{
+            width: { xs: '100%', sm: '450px', md: '500px' },  
+            height: { xs: 'auto', sm: '450px', md: '400px' },
+
+            position: 'relative',
+            zIndex: 0,
+        }}
+        >
+        {/* This is a vector at left side */}
+        <Box
+        component="img"
+        src="./src/assets/Vector3.png"
+        alt="Top Left Decoration"
+            sx={{
+            position: 'absolute',
+            top: 350,
+            left: '-9%',
+            width:'98',
+            height: '50',
+            zIndex: -1,
+        }}
+        />
+
+        {/* This is a vector at righ side */}
+        <Box
+        component="img"
+        src="./src/assets/vector1.png"
+        alt="Top Left Decoration"
+            sx={{
+            position: 'absolute',
+            top: 100,
+            left: '93%',
+            zIndex: -1,
+        }}
+        />
+
+        {/* here is the middle chiled box code */}
 
         <Box
             sx={{
@@ -63,9 +100,9 @@ const Discount = () => {
             left: '50%',
             transform: 'translate(-50%, -50%)',
             backgroundColor: '#25CE8F',
-            width:'35%',
+            width:'216px',
             borderRadius:'2px',
-            height:'40px',
+            height:'44px',
             fontWeight: 400,
             fontfamily :'Roboto',
             fontSize: '18px',
@@ -74,9 +111,13 @@ const Discount = () => {
             justifyContent:'center',
             alignItems:'center',
             color:'white',
+            paddingLeft:2,
+            paddingRight:2,
         }}
         >
-        Special 30% discount
+        <span>
+            Special <b>30%</b> discount
+        </span>
         </Box>
 
         {/* Main content box */}
@@ -97,33 +138,7 @@ const Discount = () => {
             zIndex: 0,
         }}
         >
-            {/* This is a vector at left side */}
-        <Box
-        component="img"
-        src="./src/assets/Vector3.png"
-        alt="Top Left Decoration"
-        sx={{
-        position: 'absolute',
-        top: 350,
-        left: '-9%',
-        width:'98',
-        height: '50',
-        zIndex: -1,
-        }}
-        />
 
-        {/* This is a vector at righ side */}
-        <Box
-        component="img"
-        src="./src/assets/vector1.png"
-        alt="Top Left Decoration"
-        sx={{
-        position: 'absolute',
-        top: 100,
-        left: '93%',
-        zIndex: -1,
-        }}
-        />
 
         <Typography
             variant="body1"
@@ -195,14 +210,17 @@ const Discount = () => {
 
         <Button
             variant="contained"
-            color="primary"
+            // color="primary"
             sx={{
+                fontfamily: 'Roboto',
                 fontSize: '16px',
                 fontWeight: 600,
                 width: '100%',
                 maxWidth: '300px',
                 height: '48px',
                 borderRadius: '2px',
+                backgroundColor: '#0264E1',
+                color: '#FFFFFF',
             }}
         >
             Join Now
@@ -210,6 +228,9 @@ const Discount = () => {
         </Box>
     </Box>
     {/* edn inner child box*/}
+
+
+        </Box>
 
 
     </Box>
