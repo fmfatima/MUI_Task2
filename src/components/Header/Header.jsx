@@ -5,11 +5,10 @@ const Header = () => {
   return (
     <Box
       sx={{
-        minHeight: '100vh',
+        minHeight: {xs: '60vh', sm:'60vh', md:'80vh', lg:'100vh'},
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-
         width: '100%',
         textAlign: 'center',
       }}
@@ -17,7 +16,7 @@ const Header = () => {
       <Box
         sx={{
           width: '100%',
-          maxWidth: '75%',
+          maxWidth: {xs:'80%', sm:'80%',md:'75%',lg:'75%'},
           position: 'relative',   
         }}
       >
@@ -43,7 +42,7 @@ const Header = () => {
         sx={{
           position: 'absolute',
           top: '70%',
-          right: '-16.5%',
+          right: '-12%',
           zIndex: 0,
         }}
         />
@@ -54,9 +53,11 @@ const Header = () => {
         src="./src/assets/Ellipse.png"
         alt="Top Left Decoration"
         sx={{
+          height: {xs:'50px',sm:'50px',md:'65px', lg:'70px'},
+          width: {xs:'50px',sm:'50px',md:'65px', lg:'70px'},
           position: 'absolute',
           top: 120,
-          left: '87%',
+          left: '85%',
           zIndex: 0,
         }}
         />
@@ -65,11 +66,11 @@ const Header = () => {
 
           gutterBottom
           sx={{
-            fontSize: {xs: '2rem', sm: '2.5rem',md: '4rem'},
+            fontSize: {xs: '1.5rem', sm: '2.5rem', md: '4rem'},
             fontWeight: 600,
             fontfamily: "Roboto",
             color:  '#2A2A2A',
-            mx:'3rem',
+            mx: {xs: '0rem', sm: '1rem', md:'2rem', lg:'3rem'},
           }}
         >
           Find Profitable Crypto Opportunities before Anyone Else!
@@ -81,7 +82,7 @@ const Header = () => {
             // mb: 6,
             fontfamily: "Roboto",
             fontWeight:400,
-            fontSize: '24px',
+            fontSize: {xs: '12px', sm:'14px', md:'16px',lg:'18px'},
             color:'#747474',
           }}
         >

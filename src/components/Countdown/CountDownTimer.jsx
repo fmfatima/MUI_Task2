@@ -37,7 +37,7 @@ const CountdownTimer = () => {
         py: { xs: 3, sm: 4 },
         position: 'relative',
         // width: 'fit-content',
-        mx: 'auto',
+        // mx: 'auto',
         zIndex: 0,
       }}
     >
@@ -73,7 +73,7 @@ const CountdownTimer = () => {
         elevation={3}
         sx={{
           // px: { xs: 2, sm: 3, md:4 },
-          py: { xs: 3, sm: 4, md:6 },
+          py: { xs: 3, sm: 4, md:5 },
           backgroundColor: "#fff",
           textAlign: "center",
           width: '100%',

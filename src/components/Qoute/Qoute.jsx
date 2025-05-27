@@ -5,28 +5,23 @@ const Qoute = () => {
     <Box
       sx={{
         display: 'flex',
-        flexDirection:'column',
+        flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        p: 2,
-        marginTop: 10,
-        marginBottom: 10,
+        // px: { xs: 2, sm: 3, md: 4 },
+        py: { xs: 6, sm: 8, md: 10 },
       }}
     >
       <Box
         sx={{
-          // border: '1px solid red',
           position: 'relative',
-          zIndex: 0, 
-          maxWidth: '930px',
+          zIndex: 0,
           width: '100%',
+          maxWidth: { xs: '100%', sm: '95%', md: '85%', lg: '930px', xl: '930px', },
           mx: 'auto',
-          overflow: 'visible',
         }}
       >
-         
-        {/* Add rectangle to the top left and right bottom of the BOX */}
-      {/* Top Left Decoration */}
+        {/* Top Left Decoration */}
       <Box
         component="img"
         src="./src/assets/qoute1.png"
@@ -56,60 +51,48 @@ const Qoute = () => {
         }}
       />
 
-        {/* the box typography is here */}
-
+        {/* Quote Content Box */}
         <Box
-        sx={{
-          p: { xs: 4, sm: 6, md: 8 },
-          // border: '1px solid black',
-          boxShadow: '2px 4px 12px rgba(178, 176, 176, 0.35)',
-          display: 'flex',
-          backgroundColor: 'white',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-          textAlign: 'center',
-          maxWidth: '800px',
-          width: '100%',
-          mx: 'auto',
-
-        position: 'relative',       
-        zIndex: 0,
-        }}
-      >
-
-        <Typography
-          variant="h2"
-          color="#2A2A2A"
           sx={{
-            fontSize: '32px',
-            fontfamily: 'Roboto',
-            fontWeight: 600,
-            mb: 2,
+            px: { xs: 3, sm: 4, md: 6 },
+            py: { xs: 4, sm: 5, md: 6 },
+            boxShadow: '2px 4px 12px rgba(178, 176, 176, 0.35)',
+            backgroundColor: 'white',
+            borderRadius: 2,
+            textAlign: 'center',
+            // width: '100%',
+            mx: 'auto',
+            zIndex: 1,
           }}
         >
-          We don’t guarantee profits. This is only designed to teach you how to make flash loans.
-        </Typography>
-        <Typography
-          variant="body1"
-          color="#747474"
-          sx={{
-            fontSize: '16px',
-            fontWeight: 400,
-            fontfamily: 'Roboto',
-            
-          }}
-        >
-          This class is designed to teach you how to create flash loans with smart contracts.
-          This is for educational purposes only, and we do not guarantee any profit from attending the class.
-        </Typography>
+          <Typography
+            variant="h2"
+            sx={{
+              fontSize: { xs: '20px', sm: '24px', md: '28px', lg: '32px' },
+              fontWeight: 600,
+              fontfamily: 'Roboto',
+              mb: 2,
+              color: '#2A2A2A',
+              lineHeight: 1.4,
+            }}
+          >
+            We don’t guarantee profits. This is only designed to teach you how to make flash loans.
+          </Typography>
+          <Typography
+            variant="body1"
+            sx={{
+              fontSize: { xs: '14px', sm: '15px', md: '16px', lg: '17px' },
+              fontWeight: 400,
+              fontfamily: 'Roboto',
+              color: '#747474',
+              lineHeight: 1.6,
+            }}
+          >
+            This class is designed to teach you how to create flash loans with smart contracts.
+            This is for educational purposes only, and we do not guarantee any profit from attending the class.
+          </Typography>
+        </Box>
       </Box>
-
-      {/* the box ends here */}
-
-      </Box> 
-
-      
     </Box>
   );
 };

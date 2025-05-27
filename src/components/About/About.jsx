@@ -1,6 +1,7 @@
-import { Typography, Box, Container, Grid, Button } from "@mui/material";
+import { Typography, Box, Grid, useMediaQuery } from "@mui/material";
 
 const About = () => {
+  const isMobile = useMediaQuery('(max-width:600px)');
     return(
         <Box
             sx={{
@@ -18,11 +19,11 @@ const About = () => {
             color="black"
             gutterBottom
             sx={{
-                fontSize: '48px' ,
+                fontSize: {xs: '34px', sm:'34px', md:'38px',lg:'48px'},
                 fontWeight: 600,
                 fontfamily: 'Roboto',
                 color: '#2A2A2A',
-                mx:'3rem',
+                mx:{xs:'1rem', sm: '1.5rem', md:'3rem',}
             }}
             >
             Your Edge In The Crypto Markets
@@ -31,7 +32,7 @@ const About = () => {
             variant="body1"
             sx={{
                 mb: 4,
-                fontSize: '16px',
+                fontSize: {xs: '12px', sm:'14px', md:'16px',lg:'18px'},
                 fontfamily: 'Roboto',
                 fontWeight: 400,
                 color: '#747474', 
@@ -44,7 +45,10 @@ const About = () => {
         {/* grid here */}
         <Grid container spacing={2} alignItems="center" justifyContent="center" 
         
-        sx={{ py: 1, px: 4, maxWidth: '100%', mx: 'auto',
+        sx={{ py: 1, 
+            px: {xs:'2', sm:'3', md:'4'}, 
+            maxWidth: '100%', 
+            mx: 'auto',
             minHeight: '100vh',
             marginBottom: 8,
          }}>
@@ -53,7 +57,7 @@ const About = () => {
         <Grid item xs={12} md={6}>
             <Box
                 sx={{
-                mx:{md: 20},
+                mx:{xs: 5, md: 20},
                 maxWidth: '400px',
                 height: '100%',
                 display: 'flex',
@@ -85,7 +89,7 @@ const About = () => {
                   sx={{ 
                     color: '#2A2A2A',
                     fontfamily: 'Roboto',
-                    fontSize:'32px' ,
+                    fontSize: {xs: '24px', sm:'24px', md:'32px',lg:'32px'},
                     fontWeight: 600,
                     lineHeight: 1.2,
                     justifyContent:'felx-start',
@@ -183,7 +187,7 @@ const About = () => {
                   color="primary"
                   sx={{ 
                     color: '#2A2A2A',
-                    fontSize: '32px' ,
+                    fontSize: {xs: '24px', sm:'24px', md:'32px',lg:'32px'},
                     fontWeight: 600,
                     // lineHeight: 1.2,
                     justifyContent:'flex-start',
@@ -226,7 +230,7 @@ const About = () => {
                   color="primary"
                   sx={{ 
                     fontfamily: 'Roboto',
-                    fontSize:'32px' ,
+                    fontSize: {xs: '24px', sm:'24px', md:'32px',lg:'32px'},
                     fontWeight: 600,
                     color: '#2A2A2A',
                     justifyContent:'felx-start',
@@ -319,8 +323,9 @@ const About = () => {
                 position: 'relative',
                 }}
             >
-                 {/* This is a vector at right side */}
-                <Box
+                {/* This is a vector at right side */}
+                {isMobile ? '' : 
+                  <Box
                 component="img"
                 src="./src/assets/Vector.png"
                 alt="Top Left Decoration"
@@ -331,12 +336,15 @@ const About = () => {
                 zIndex: 0,
                 }}
                 />
+                }
+                
+
                 <Typography
                   variant="h4"
                   color="primary"
                   sx={{ 
                     color: '#2A2A2A',
-                    fontSize: '32px' ,
+                    fontSize: {xs: '24px', sm:'24px', md:'32px',lg:'32px'},
                     fontWeight: 600,
                     // lineHeight: 1.2,
                     justifyContent:'flex-start',

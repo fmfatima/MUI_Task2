@@ -1,11 +1,13 @@
-import {Box, Typography, Button} from "@mui/material"
+import {Box, Typography, Button, useMediaQuery } from "@mui/material"
 import CheckIcon from '@mui/icons-material/Check';
 
 const Discount = () => {
+      const isMobile = useMediaQuery('');
+
   return (
     <Box
         sx={{
-        minHeight:'100vh',
+        minHeight: {xs: '60vh', sm:'60vh', md:'80vh', lg:'100vh'},
         textAlign: 'center',
         display: 'flex',
         flexDirection: 'column',
@@ -23,7 +25,7 @@ const Discount = () => {
             color="#2A2A2A"
             gutterBottom
             sx={{
-            fontSize: '48px',
+            fontSize: {xs: '1.75rem', sm: '2.5rem', md: '3rem', lg:'3rem'},
             fontWeight: 600,
             fontfamily: 'Roboto',
             }}
@@ -35,11 +37,11 @@ const Discount = () => {
             variant="body1"
             sx={{
             mb: 4,
-            fontSize: '16px' , 
+            fontSize: {xs: '14px', sm: '14px', md: '16px', lg:'16px'},
             fontfamily: "Roboto",
             fontWeight: 400,
             color: '#2A2A2A',
-            // mx: '3rem',
+            mx: {xs:'3px'},
             maxWidth: '600px',   
             }}
         >
@@ -51,12 +53,13 @@ const Discount = () => {
             sx={{
             width: { xs: '100%', sm: '450px', md: '500px' },  
             height: { xs: 'auto', sm: '450px', md: '400px' },
-
             position: 'relative',
             zIndex: 0,
         }}
         >
-        {/* This is a vector at left side */}
+            {/* these are decorations for lg sc */}
+        {isMobile ? '' : 
+           
         <Box
         component="img"
         src="./src/assets/Vector3.png"
@@ -70,8 +73,8 @@ const Discount = () => {
             zIndex: -1,
         }}
         />
-
-        {/* This is a vector at righ side */}
+        }
+        {isMobile ? '' : 
         <Box
         component="img"
         src="./src/assets/vector1.png"
@@ -83,6 +86,7 @@ const Discount = () => {
             zIndex: -1,
         }}
         />
+        }
 
         {/* here is the middle chiled box code */}
 
@@ -105,7 +109,7 @@ const Discount = () => {
             height:'44px',
             fontWeight: 400,
             fontfamily :'Roboto',
-            fontSize: '18px',
+            fontSize: {xs: '16px', sm: '16px', md: '18px', lg:'18px'},
             zIndex: 1,
             display:'flex',
             justifyContent:'center',
@@ -123,8 +127,8 @@ const Discount = () => {
         {/* Main content box */}
         <Box
         sx={{
-            width: { xs: '100%', sm: '450px', md: '500px' },  
-            height: { xs: 'auto', sm: '450px', md: '400px' },
+            width: { xs: '100%', sm: '100%', md: '500px' },  
+            height: { xs: '450px', sm: '450px', md: '400px' },
             textAlign: 'center',
             display: 'flex',
             flexDirection: 'column',
@@ -144,7 +148,7 @@ const Discount = () => {
             variant="body1"
             sx={{
             mb: 1,
-            fontSize:'24px' ,
+            fontSize: {xs: '22px', sm: '22px', md: '24px', lg:'24px'},
             fontfamily: 'Roboto',
             fontWeight: 400,
             mt: -5,

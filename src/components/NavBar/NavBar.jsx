@@ -68,14 +68,14 @@ const NavBar = () => (
     </Container>
     </AppBar>
     <main>
-        <Header />
-        <Countdown />
+        {/* <Header />
+        <Countdown /> */}
         <About />
-        <Discount />
+        {/* <Discount />
         <Testimonial />
         <Qoute />
         <Faqs />
-        <Qoute2 />
+        <Qoute2 /> */}
     </main>
     </>
 );

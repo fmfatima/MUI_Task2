@@ -1,188 +1,122 @@
-import { Box, Typography, Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
+import { Box, Typography, Accordion, AccordionSummary, AccordionDetails, useMediaQuery,} from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const Faqs = () => {
+  const isMobile = useMediaQuery('');
+
   return (
     <Box
       sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-          textAlign: 'start',
-          px: 2,
-          p: 8,
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        px: 2,
+        py: { xs: 4, sm: 6, md: 8 },
+        maxWidth:'100%',
+
       }}
     >
+      {/* Heading */}
+      <Typography
+        variant="h2"
+        sx={{
+          fontSize: { xs: '1.75rem', sm: '2.5rem', md: '3rem' },
+          fontWeight: 600,
+          fontfamily: 'Roboto',
+          color: '#2A2A2A',
+          mb: 4,
+          textAlign: 'center',
+        }}
+      >
+        What Our Users are Saying
+      </Typography>
 
-        <Typography
-          variant="h2"
-          color="#2A2A2A"
-          sx={{
-            fontSize: '48px',
-            fontWeight: 600,
-            fontfamily: 'Roboto',
-            mb: 4,
-          }}
-        >
-          What Our Users are Saying
-        </Typography>
-
-        {/* FAQs Section */}
-        <Box
-         sx={{
-                maxWidth:'900px',
-                width: '100%',
-                position: 'relative',
-            }}
-        >
-            {/* vector on right side Decoration */}
-            <Box
-                component="img"
-                src="./src/assets/FaqVector.png"
-                alt="Bottom Right Decoration"
-                sx={{
-                position: 'absolute',
-                left: '123.7%',
-                }}
-            />
-
-          <Accordion
+      {/* FAQ Container */}
+      <Box
+        sx={{
+          // width: '100%',
+          maxWidth: { xs: '100%', sm: '90%', md: '900px', lg: '970px' },
+          position: 'relative',
+        }}
+      >
+        {/* Decorative Image */}
+        {isMobile ? '' : 
+          <Box
+            component="img"
+            src="./src/assets/FaqVector.png"
+            alt="Decoration"
             sx={{
-              width: '970px',
+              position: 'absolute',
+              left: '105%',
+              top: 0,
+              maxWidth: '200px',
+            }}
+          />
+        }
+
+        {/* FAQs */}
+        {[
+          {
+            title: 'What chains do you support?',
+            content:
+              'We currently support Ethereum mainnet. We have multi-chain support on our roadmap soon.',
+          },
+          {
+            title: 'Can I pay in crypto?',
+            content:
+              'We accept crypto payments on Ethereum mainnet and plan to support more chains soon.',
+          },
+          {
+            title: 'Will You raise the price?',
+            content:
+              'Prices may increase in the future. Lock in your spot now to get early access at current rates.',
+          },
+        ].map((faq, index) => (
+          <Accordion
+            key={index}
+            sx={{
+              width: '100%',
               boxShadow: '0 4px 4px rgba(114, 113, 113, 0.07)',
               border: 'none',
-              '&::before': {
-                display: 'none',
-              },
+              '&::before': { display: 'none' },
               mb: 2,
-              fontFamily: 'Roboto',
+              fontfamily: 'Roboto',
             }}
           >
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon sx={{ width: '32px', height: '32px', color: '#2187D0' }} />}
+              expandIcon={
+                <ExpandMoreIcon
+                  sx={{ width: 32, height: 32, color: '#2187D0' }}
+                />
+              }
             >
               <Typography
-                variant="body1"
                 sx={{
-                  fontSize: '24px',
+                  fontSize: { xs: '1.1rem', sm: '1.2rem', md: '1.5rem' },
                   fontWeight: 500,
                   color: '#2A2A2A',
-                  marginLeft: 3,
+                  ml: 1,
                 }}
               >
-                What chains do you support?
+                {faq.title}
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography
-                variant="body1"
                 sx={{
-                  fontSize: '16px',
+                  fontSize: '1rem',
                   fontWeight: 400,
-                  display: 'flex',
-                  justifyContent: 'start',
-                  alignItems: 'start',
                   color: '#747474',
-                  marginLeft: 3,
+                  ml: 1,
                 }}
               >
-                We currently support Ethereum mainnet. We have multi-chain support on our roadmap soon.
+                {faq.content}
               </Typography>
             </AccordionDetails>
           </Accordion>
-
-
-          <Accordion
-            sx={{
-              width: '970px',
-              boxShadow: '0 4px 4px rgba(114, 113, 113, 0.07)',
-              border: 'none',
-              '&::before': {
-                display: 'none',
-              },
-              mb: 2,
-              fontFamily: 'Roboto',
-            }}
-          >
-            <AccordionSummary expandIcon={<ExpandMoreIcon sx={{width: '32px', height: '32px', color: '#2187D0'}}/>}>
-              <Typography 
-              variant='body1'
-              sx={{
-                fontSize: '24px',
-                fontWeight: 500,
-                color: '#2A2A2A',
-                marginLeft: 3, 
-              }}
-              >
-            Can I pay in crypto?</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography 
-              variant='body1'
-              sx={{
-               fontSize: '16px',
-                fontWeight:400,
-                display:'flex',
-                justifyContent:'start',
-                alignItems:'start',
-                color: '#747474',
-                marginLeft:3, 
-              }}
-              >
-                We currently support Ethereum mainnet. We have multi-chain support on our roadmap soon.
-                We currently support Ethereum mainnet. We have multi-chain support on our roadmap soon.
-                
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
-
-          <Accordion
-            sx={{
-              width: '970px',
-              boxShadow: '0 4px 4px rgba(114, 113, 113, 0.07)',
-              border: 'none',
-              '&::before': {
-                display: 'none',
-              },
-              mb: 2,
-              fontFamily: 'Roboto',
-            }}
-          >
-            <AccordionSummary expandIcon={<ExpandMoreIcon sx={{width: '32px', height: '32px', color: '#2187D0'}}/>}>
-              <Typography 
-              variant='body1'
-              sx={{
-                fontSize: '24px',
-                fontWeight: 500,
-                color: '#2A2A2A',
-                marginLeft: 3, 
-              }}
-              >
-            Will You raise the price?</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography 
-              variant='body1'
-              sx={{
-                fontSize: '16px',
-                fontWeight:400,
-                display:'flex',
-                justifyContent:'start',
-                alignItems:'start',
-                color: '#747474',
-                marginLeft:3, 
-                marginTop: -2,
-              }}
-              >
-                We currently support Ethereum mainnet. We have multi-chain support on our roadmap soon.
-                We currently support Ethereum mainnet. We have multi-chain support on our roadmap soon.
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
-          
-        </Box>
+        ))}
       </Box>
+    </Box>
   );
 };
 

@@ -33,8 +33,9 @@ const Testimonial = () => {
     sx={{ 
       py: { xs: 4, sm: 5, md: 6 }, 
       px: 0, 
-      maxWidth: '1520px', 
-      mx: 'auto', 
+      maxWidth: {xs: '430px', sm: '820px', md: '1020px', lg: '1520px', xl: '1520px'},
+      mx: 'auto',
+      // width: '100%', 
       // backgroundColor: 'grey'
     }}>
 
@@ -55,7 +56,7 @@ const Testimonial = () => {
           variant="h2"
           color="black"
           sx={{
-            fontSize: '48px',
+            fontSize: {xs: '2rem', sm: '2.5rem', md: '3rem'},
             fontWeight: 600,
             fontfamily: 'Roboto',
             color:'#2A2A2A',
